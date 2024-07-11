@@ -13,7 +13,8 @@ class _ItemSection extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Image.network('https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/8/c2b550a5-736d-45a3-8099-80deb60ef995.jpg',
+                child: Image.network(
+                  'https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/8/c2b550a5-736d-45a3-8099-80deb60ef995.jpg',
                   width: 74,
                   height: 74,
                   fit: BoxFit.cover,
@@ -35,9 +36,13 @@ class _ItemSection extends StatelessWidget {
           Dimens.defaultSize.height,
           Row(
             children: [
-              Expanded(child: OutlinedButton(onPressed: (){}, child: const Text('Edit'))),
+              Expanded(
+                  child: OutlinedButton(
+                      onPressed: () {}, child: const Text('Edit'))),
               Dimens.defaultSize.width,
-              Expanded(child: OutlinedButton(onPressed: (){}, child: const Text('Delete')))
+              Expanded(
+                  child: OutlinedButton(
+                      onPressed: () {}, child: const Text('Delete')))
             ],
           )
         ],

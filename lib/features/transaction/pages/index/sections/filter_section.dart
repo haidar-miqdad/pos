@@ -1,4 +1,3 @@
-
 part of '../page.dart';
 
 class _FilterSection extends StatefulWidget {
@@ -29,21 +28,27 @@ class _FilterSectionState extends State<_FilterSection> {
     final isActive = selected == label;
     return InkWell(
       borderRadius: BorderRadius.circular(8.0),
-      onTap: (){
+      onTap: () {
         setState(() {
-          selected = label; //nilai dari selected akan diganti dengan label yg diklik
+          selected =
+              label; //nilai dari selected akan diganti dengan label yg diklik
         });
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: Dimens.dp16, vertical: Dimens.dp8),
+        padding: const EdgeInsets.symmetric(
+            horizontal: Dimens.dp16, vertical: Dimens.dp8),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             color: isActive ? context.theme.primaryColor : null,
             border: Border.all(
-              color: isActive ? context.theme.primaryColor : AppColors.white[500]!,
-            )
+              color:
+                  isActive ? context.theme.primaryColor : AppColors.white[500]!,
+            )),
+        child: RegularText.semiBold(
+          label,
+          style: TextStyle(
+              color: isActive ? AppColors.white : AppColors.black[200]),
         ),
-        child:  RegularText.semiBold(label, style: TextStyle(color: isActive ? AppColors.white : AppColors.black[200]),),
       ),
     );
   }

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pos/core/core.dart';
 
-
 part 'sections/item_section.dart';
 
 class ProductPage extends StatelessWidget {
-  const ProductPage();
+  const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +25,13 @@ class ProductPage extends StatelessWidget {
           ),
           Expanded(
             child: ListView.separated(
-                itemBuilder: (context, index){
-                  return const _ItemSection();
-                },
-                separatorBuilder: (context, index){
-                  return Dimens.defaultSize.height;
-                },
-                itemCount: 3,
+              itemBuilder: (context, index) {
+                return const _ItemSection();
+              },
+              separatorBuilder: (context, index) {
+                return Dimens.defaultSize.height;
+              },
+              itemCount: 3,
             ),
           )
         ],
@@ -40,4 +39,3 @@ class ProductPage extends StatelessWidget {
     );
   }
 }
-

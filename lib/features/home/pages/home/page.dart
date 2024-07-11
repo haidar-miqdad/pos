@@ -16,7 +16,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const _CardSection(title: 'Total Penjualan', value: 'Rp. 5.000.000'),
+            const _CardSection(
+                title: 'Total Penjualan', value: 'Rp. 5.000.000'),
             Dimens.dp16.height,
             const _CardSection(title: 'Total Transaksi', value: '300.000'),
             Dimens.dp16.height,

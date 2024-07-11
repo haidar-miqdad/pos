@@ -14,13 +14,13 @@ class RegularTextInput extends StatelessWidget {
     this.prefixIcon,
   });
 
-  final String hintText ;
+  final String hintText;
   final TextEditingController? controller;
   final bool enabled;
   final List<TextInputFormatter>? inputFormatters;
   final int? maxLines;
-  final int?minLines;
-  final int?maxLength;
+  final int? minLines;
+  final int? maxLength;
   final IconData? prefixIcon;
 
   @override
@@ -33,10 +33,9 @@ class RegularTextInput extends StatelessWidget {
       minLines: minLines,
       maxLength: maxLength,
       decoration: InputDecoration(
-          hintText: hintText,
-          prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+        hintText: hintText,
+        prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
       ),
     );
   }
 }
-

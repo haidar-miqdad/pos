@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pos/core/core.dart';
+import 'package:pos/core/preferences/preferences.dart';
 
 class LightTheme {
   final Color primaryColor;
@@ -52,20 +53,17 @@ class LightTheme {
   }
 
   AppBarTheme get appBarTheme {
-    return AppBarTheme(
-      centerTitle: false,
-      surfaceTintColor: scaffoldColor
-    );
+    return AppBarTheme(centerTitle: false, surfaceTintColor: scaffoldColor);
   }
 
   CardTheme get cardTheme {
     return CardTheme(
-        elevation: 0,
-        margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Dimens.dp8),
-            side: BorderSide(color: borderColor),
-        ),
+      elevation: 0,
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        side: BorderSide(color: borderColor),
+      ),
     );
   }
 
@@ -82,61 +80,63 @@ class LightTheme {
         fontSize: Dimens.dp10,
         color: disabledColor,
       ),
-
     );
   }
 
   ElevatedButtonThemeData get elevatedButtonTheme {
-    return  ElevatedButtonThemeData(
+    return ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             backgroundColor: primaryColor,
             foregroundColor: scaffoldColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(Dimens.dp8)),
-            textStyle: textTheme.titleMedium
-        )
-    );
+            textStyle: textTheme.titleMedium));
   }
 
-OutlinedButtonThemeData get outlinedButtonTheme {
+  OutlinedButtonThemeData get outlinedButtonTheme {
     return OutlinedButtonThemeData(
       style: ElevatedButton.styleFrom(
           foregroundColor: primaryColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dp8),),
-          side: BorderSide(color: primaryColor,),
-          textStyle: textTheme.titleMedium
-      ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(Dimens.dp8),
+          ),
+          side: BorderSide(
+            color: primaryColor,
+          ),
+          textStyle: textTheme.titleMedium),
     );
   }
 
-  InputDecorationTheme get inputDecorationTheme{
+  InputDecorationTheme get inputDecorationTheme {
     return InputDecorationTheme(
       fillColor: inputColor,
       filled: true,
       hintStyle: textTheme.labelMedium,
       prefixIconColor: textDisabledColor,
-      contentPadding: const EdgeInsets.symmetric(vertical: Dimens.dp12, horizontal: Dimens.defaultSize),
+      contentPadding: const EdgeInsets.symmetric(
+          vertical: Dimens.dp12, horizontal: Dimens.defaultSize),
       enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Dimens.dp8),
-          borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide.none,
       ),
       disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Dimens.dp8),
-          borderSide: BorderSide(color: inputColor),
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: inputColor),
       ),
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.dp8),
-          borderSide: BorderSide(color: primaryColor)
-      ),
+          borderSide: BorderSide(color: primaryColor)),
       errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.dp8),
-          borderSide: BorderSide(color: errorColor)
-      ),
+          borderSide: BorderSide(color: errorColor)),
       focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.dp8),
-          borderSide: BorderSide(color: errorColor)
-      ),
+          borderSide: BorderSide(color: errorColor)),
     );
+  }
+
+  DividerThemeData get dividerTheme {
+    return DividerThemeData(color: AppColors.white[400]);
   }
 
   ThemeData get theme {
@@ -153,6 +153,7 @@ OutlinedButtonThemeData get outlinedButtonTheme {
       elevatedButtonTheme: elevatedButtonTheme,
       outlinedButtonTheme: outlinedButtonTheme,
       inputDecorationTheme: inputDecorationTheme,
+      dividerTheme: dividerTheme,
     );
   }
 }

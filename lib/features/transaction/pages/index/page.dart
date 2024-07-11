@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pos/core/core.dart';
 
@@ -12,30 +10,26 @@ class TransactionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Transaction'),
-      ),
-      body: InkWell(
-        onTap: (){},
-        child: Padding(
-          padding: const EdgeInsets.all(Dimens.defaultSize),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const _FilterSection(),
-              Dimens.dp24.height,
-              Expanded(
-                child: ListView(
-                  children: const [
-                     _ItemSection()
-                  ],
-                ),
-              ),
-            ],
-          ),
+        appBar: AppBar(
+          title: const Text('Transaction'),
         ),
-      )
-    );
+        body: InkWell(
+          onTap: () {},
+          child: Padding(
+            padding: const EdgeInsets.all(Dimens.defaultSize),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const _FilterSection(),
+                Dimens.dp24.height,
+                Expanded(
+                  child: ListView(
+                    children: const [_ItemSection()],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
-
