@@ -7,7 +7,7 @@ import '../features/home/pages/pages.dart';
 Route<dynamic> routes(settings) {
   switch (settings.name) {
     case MainPage.routeName:
-      return MaterialPageRoute(builder: (context) => const HomePage());
+      return MaterialPageRoute(builder: (context) => const MainPage());
 
     default:
       return MaterialPageRoute(builder: (context) {
