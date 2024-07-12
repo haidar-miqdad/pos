@@ -50,7 +50,7 @@ class SettingsPage extends StatelessWidget {
               const Divider(
                 thickness: 8,
               ),
-              const _ItemSection(
+               const _ItemSection(
                 title: 'Info Lainnya',
                 items: [
                   ItemMenuPreferences(
